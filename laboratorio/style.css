@@ -6,41 +6,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*ROOT define variaveis globais sem tipo*/
+:root {
+  --background-color: red;
+  --shorthand: normal small-caps bold 1rem / 3rem arial;
+}
 
 #moldura {
-  width: 800px;
-
-  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
 }
-
-#moldura > div:nth-of-type(2) {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-
-#moldura > div:first-of-type {
-  width: 20px;
-  height: 20px;
-  background-color: lime;
-}
-#moldura > .quadro3:target {
-  background-color: aqua;
-  margin-top: 400px;
-}
-#moldura > .quadro3:target::before {
-  content: "ANTES AQUI?";
-  background-color: black;
-  color: red;
-}
-#moldura > .quadro3:target::after {
-  content: "DEPOIS AQUI";
-  color: lime;
-  background-color: black;
-}
-#moldura > p:first-of-type::first-letter {
-  color: red;
-  background-color: black;
-  font-size: 2rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#moldura > p {
+  background: var(--background-color);
+  font: var(--shorthand);
 }
