@@ -2,13 +2,29 @@ html {
   font-size: 62.5%;
 }
 
-div {
+.divzinha {
   width: 400px;
-  background-color: red;
   height: 400px;
-  border-top: 5px solid black;
-  border-right: 10px double blue;
+  border: 2px solid black;
+  position: relative;
 }
-p {
-  font: italic small-caps bold 3rem / 3rem "Roboto";
+
+.divzinha > span {
+  content: "";
+  font-size: 10rem;
+  height: 4em;
+  width: 4em;
+  position: absolute;
+  background-color: lime;
+}
+
+span::before {
+  content: "";
+  width: 1em;
+  height: 2.5em;
+  position: absolute;
+  border-bottom: 0.4em solid white;
+  border-right: 0.4em solid white;
+
+  transform: translate(1.3em, 0.3em) rotate(45deg);
 }
