@@ -1,22 +1,33 @@
 #moldura {
-  width: 500px;
+  width: 800px;
   height: 500px;
   border: 2px solid black;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
-#moldura > div {
-  width: 100px;
-  height: 100px;
+
+.div1{
+  border: 2px solid red;
+  margin: 5px;
+  grid-row: 1/4;
 }
-.caixa1 {
-  background-color: red;
+.div2{
+  border: 2px solid rgb(251, 255, 0);
+  margin: 5px;
+  grid-column: 2/4;
+  grid-row: 1/3;
 }
-.caixa2 {
-  background-color: lime;
+.div3{
+  border: 2px solid rgb(0, 255, 0);
+  margin: 5px;
 }
-.caixa3 {
-  background-color: blue;
+.div4{
+  border: 2px solid rgb(0, 238, 255);
+  margin: 5px;
+}
+.div5{
+  border: 2px solid rgb(255, 0, 149);
+  margin: 5px;
 }
