@@ -7,6 +7,7 @@ body {
 
 #moldura {
   height: 99%;
+  width: 80%;
   border: 2px solid black;
   margin: 0 auto;
 
@@ -14,22 +15,36 @@ body {
   grid-template-areas:
     "header header header"
     "nav main main"
+    "nav main main"
+    "nav main main"
+    "nav main main"
     "footer footer footer";
-
-  row-gap: 1rem;
+  gap: 1rem;
+  padding: 1rem;
 }
+
 header {
   border: 2px solid black;
   grid-area: header;
 }
 nav {
-  grid-area: nav;
   border: 2px solid blue;
+  grid-area: nav;
 }
 main {
   border: 2px solid red;
   grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1rem;
+  align-content: space-evenly;
+  justify-content: space-evenly;
 }
+div[class^="caixa"] {
+  border: 2px solid blue;
+}
+
 footer {
   border: 2px solid lime;
   grid-area: footer;
